@@ -517,6 +517,8 @@
                     console.log('Patient added successfully');
                     // Close the popup
                     addPatientForm.style.display = 'none';
+                    // Reload page
+                    location.reload();
                 } else {
                     console.error(`Error adding patient: ${response.statusText}`);
                 }
@@ -709,52 +711,6 @@
     // Add click event listener to the switch page button
     const switchPageButton = document.getElementById('switchPageButton');
     switchPageButton.addEventListener('click', togglePage);
-
-    // CHART GRAPH
-    /*const anomalyData = {
-        labels: ['Temperature', 'BPM High', 'BPM Low', 'Fall Detection'],
-        datasets: [{
-            data: [10, 5, 3, 8], // Replace with actual occurrence numbers
-            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50'],
-        }],
-    };
-
-    // Get the canvas element
-    const anomalyChartCanvas = document.getElementById('anomalyPieChart');
-
-    // Create a pie chart
-    const anomalyChart = new Chart(anomalyChartCanvas, {
-        type: 'pie',
-        data: anomalyData,
-    });
-
-    // Example data for the bar chart (replace this with your actual data)
-    const barChartData = {
-        labels: ['January', 'February', 'March', 'April', 'May'],
-        datasets: [{
-            label: 'Anomaly Occurrences',
-            data: [5, 10, 8, 15, 12], // Replace with actual occurrence numbers
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1,
-        }],
-    };
-
-    // Get the canvas element for the bar chart
-    const barChartCanvas = document.getElementById('anomalyBarChart');
-
-    // Create a bar chart
-    const barChart = new Chart(barChartCanvas, {
-        type: 'bar',
-        data: barChartData,
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true,
-                },
-            },
-        },
-    }); */
 
     //EXEC AT START
 
